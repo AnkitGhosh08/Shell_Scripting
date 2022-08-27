@@ -1,0 +1,19 @@
+ 
+1) Print last 4 frequently access urls count in sorted order from /var/log/httpd/
+ access.log 
+
+commond:-  cat access.log | awk '{print $11}' | sort -nr | head -4
+
+2)  Print last 4 frequently access unique url count at particular hours from /var/log/
+ httpd/access.log
+ 
+commond:-  cat access.log | awk '{print $1}' | sort -nr | uniq -c | head -4
+
+3)  Print list of web response code count in the unique sorted order at specific 
+ hours .
+
+commond:-  cat access.log | awk '{print $4}' | sort -nr | head -4
+
+4)  Print list of last 10 unique sorted client IP from /var/log/httpd/access.log
+
+commond:- cat access.log | awk '{print -NF}' | sort -nr | tail -10  

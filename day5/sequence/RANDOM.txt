@@ -1,0 +1,6 @@
+1. use random function ((RANDOM))to get single digit.
+command:- echo $((RANDOM%2))
+
+2.use random to get dice number b/w 1 to 6
+command:- echo $((1+RANDOM%6))
+
